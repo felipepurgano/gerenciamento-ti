@@ -1,96 +1,112 @@
 /* Resetando margens e preenchimentos */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Faz com que a largura e altura dos elementos incluam padding e borda */
+    font-family: Arial, sans-serif; /* Define a fonte padrão para todo o conteúdo */
 }
 
 /* Estilizando o container principal */
 .container-login {
-    display: flex;
-    height: 80vh; /* Reduzindo um pouco a altura */
-    width: 80vw; /* Reduzindo a largura para não ocupar a tela toda */
-    max-width: 1000px; /* Limitando a largura máxima */
-    max-height: 600px; /* Limitando a altura máxima */
-    margin: auto; /* Centraliza o container na tela */
-    margin-top: 13vh;
-    border-radius: 10px; /* Bordas arredondadas para um design melhor */
-    overflow: hidden; /* Para manter a imagem ajustada corretamente */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adicionando sombra para destacar */
+    display: flex; /* Define a estrutura flexível para o container */
+    height: 80vh; /* Define a altura do container como 80% da altura da tela */
+    width: 80vw; /* Define a largura do container como 80% da largura da tela */
+    max-width: 1000px; /* Limita a largura máxima do container a 1000px */
+    max-height: 600px; /* Limita a altura máxima do container a 600px */
+    margin: auto; /* Centraliza o container horizontalmente */
+    margin-top: 13vh; /* Adiciona um espaçamento superior de 13% da altura da tela */
+    border-radius: 10px; /* Arredonda os cantos do container para um design mais suave */
+    overflow: hidden; /* Impede o conteúdo de ultrapassar os limites do container */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave ao redor do container */
 }
 
 /* Área da imagem/vídeo */
 .left-side {
-    flex: 1;
-    background: #ddd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex: 1; /* Faz com que a área da esquerda ocupe 50% do espaço disponível */
+    background: #ddd; /* Define a cor de fundo da área da esquerda */
+    display: flex; /* Define a área como flexível */
+    align-items: center; /* Alinha o conteúdo (imagem ou vídeo) verticalmente no centro */
+    justify-content: center; /* Alinha o conteúdo (imagem ou vídeo) horizontalmente no centro */
 }
 
 .left-side img, .left-side video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%; /* Faz a imagem ou vídeo ocupar toda a largura disponível */
+    height: 100%; /* Faz a imagem ou vídeo ocupar toda a altura disponível */
+    object-fit: cover; /* Faz a imagem ou vídeo cobrir toda a área, sem distorcer, cortando o que sobra */
 }
 
 /* Área do formulário */
 .right-side {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background: #fff;
+    flex: 1; /* Faz com que a área do formulário ocupe o restante do espaço disponível */
+    display: flex; /* Define a área como flexível */
+    flex-direction: column; /* Organiza os itens dentro da área de forma vertical */
+    align-items: center; /* Alinha os itens horizontalmente no centro */
+    justify-content: center; /* Alinha os itens verticalmente no centro */
+    padding: 20px; /* Adiciona um preenchimento de 20px em todas as direções */
+    background: #fff; /* Define o fundo da área como branco */
 }
 
 .right-side h2 {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Adiciona um espaço abaixo do título */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Define a fonte do título */
 }
 
+/* Estilizando o formulário */
 .right-side form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 300px;
+    display: flex; /* Organiza os itens do formulário de maneira flexível */
+    flex-direction: column; /* Organiza os itens do formulário de forma vertical */
+    width: 100%; /* Faz o formulário ocupar 100% da largura disponível */
+    max-width: 300px; /* Limita a largura máxima do formulário a 300px */
 }
 
+/* Labels */
 .right-side label {
-    margin-bottom: 5px;
+    margin-bottom: 5px; /* Adiciona um pequeno espaço abaixo de cada label */
 }
 
+/* Container dos inputs para incluir ícones */
+.input-container {
+    position: relative; /* Permite que o ícone seja posicionado de maneira absoluta dentro do input */
+    display: flex; /* Define o container dos inputs como flexível */
+    align-items: center; /* Alinha o conteúdo verticalmente no centro */
+    margin-bottom: 15px; /* Adiciona um espaço abaixo de cada campo de input */
+}
+
+/* Ícones dentro dos inputs */
+.input-container .icon {
+    position: absolute; /* Posiciona o ícone de maneira absoluta dentro do container */
+    left: 12px; /* Alinha o ícone à esquerda, com 12px de distância da borda */
+    color: gray; /* Define a cor do ícone como cinza */
+    font-size: 16px; /* Define o tamanho do ícone */
+}
+
+/* Inputs */
 .right-side input {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 100%; /* Faz com que o input ocupe toda a largura disponível */
+    padding: 10px; /* Adiciona 10px de preenchimento interno */
+    padding-left: 35px; /* Adiciona 35px de espaço à esquerda para o ícone */
+    border: 1px solid #ccc; /* Define a borda do input com cor cinza clara */
+    border-radius: 5px; /* Arredonda os cantos do input */
+    font-size: 16px; /* Define o tamanho da fonte dentro do input */
 }
 
+/* Botão de login */
 .right-side button {
-    padding: 10px;
-    background: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
+    display: flex; /* Define o botão como flexível para alinhar o ícone e texto */
+    align-items: center; /* Alinha o conteúdo do botão verticalmente no centro */
+    justify-content: center; /* Alinha o conteúdo do botão horizontalmente no centro */
+    gap: 8px; /* Adiciona um espaço entre o texto e o ícone */
+    padding: 10px; /* Adiciona 10px de preenchimento interno no botão */
+    background: #007BFF; /* Define a cor de fundo do botão como azul */
+    color: white; /* Define a cor do texto como branco */
+    border: none; /* Remove a borda padrão do botão */
+    border-radius: 5px; /* Arredonda os cantos do botão */
+    cursor: pointer; /* Altera o cursor para "pointer" para indicar que é clicável */
+    font-size: 16px; /* Define o tamanho da fonte do botão */
+    margin-top: 30px; /* Adiciona um espaçamento acima do botão */
 }
 
+/* Efeito de hover no botão */
 .right-side button:hover {
-    background: #0056b3;
-}
-
-.right-side p {
-    margin-top: 10px;
-}
-
-.right-side a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-.right-side a:hover {
-    text-decoration: underline;
+    background: #0056b3; /* Altera a cor de fundo para um tom mais escuro de azul quando o botão é hoverado */
 }

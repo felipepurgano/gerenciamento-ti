@@ -42,10 +42,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'impressoras.apps.ImpressorasConfig',
-    'home.apps.HomeConfig',
     'usuarios.apps.UsuariosConfig',
     'manutencoes.apps.ManutencoesConfig',
     'telefones.apps.TelefonesConfig',
+    'servidores.apps.ServidoresConfig',
+    'cftv.apps.CftvConfig',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static%}
+
+{% block 'head'%}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock 'head'%}
+
+{% block 'body' %}
+    
+    <!-- Seção Principal -->
+    <section class="hero">
+        <div class="container">
+            <h2>Gerencie sua infraestrutura de TI com eficiência</h2>
+            <p>Controle total sobre equipamentos, acessos e manutenções.</p>
+            <a href="#features" class="btn">Saiba Mais</a>
+        </div>
+    </section>
+    
+    <!-- Funcionalidades -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Funcionalidades Principais</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>📁 Gestão de Equipamentos</h3>
+                    <p>Registre e acompanhe computadores, servidores, switchs e DVRs.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔧 Manutenção Preventiva</h3>
+                    <p>Controle histórico de revisões e substituições de peças.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔑 Controle de Acessos</h3>
+                    <p>Gerencie permissões de impressoras, redes e dispositivos.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>📊 Relatórios Inteligentes</h3>
+                    <p>Gere relatórios sobre utilização e alertas de manutenção.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Benefícios -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <h2>Por que usar nosso sistema?</h2>
+            <ul>
+                <li>📊 Monitoramento em tempo real</li>
+                <li>⚙️ Automação de processos</li>
+                <li>🔒 Maior segurança e controle</li>
+                <li>🔔 Alertas e notificações eficientes</li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Gestão de TI - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+{% endblock 'body' %}

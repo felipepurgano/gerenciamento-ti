@@ -1,0 +1,43 @@
+/* Estilização do container centralizado */
+.center__container {
+    display: flex; /* Define o container como flexível */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    height: 100vh; /* Define a altura para ocupar toda a tela */
+    background-color: #4d4d4d; /* Define a cor de fundo */
+}
+
+/* Grid para os cartões */
+.servicos-itens {
+    display: grid; /* Define o layout como grid */
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas de tamanho igual */
+    gap: 20px; /* Define um espaçamento entre os blocos */
+    background-color: #f4f4f4; /* Define a cor de fundo atrás dos blocos */
+    padding: 50px; /* Define a distância do fundo branco dos blocos azuis */
+    border-radius: 30px; /* Define a curvatura do fundo branco */ 
+}
+
+/* Estilização dos blocos */
+.cards {
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+.cards div {
+    width: 220px; /* Define a largura do bloco */
+    height: 200px; /* Define a altura do bloco */
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    align-items: center; /* Centraliza o texto verticalmente */
+    background-color: #007bff; /* Define a cor de fundo azul */
+    color: white; /* Define a cor do texto como branca */
+    font-size: 30px; /* Define o tamanho da fonte */
+    font-weight: bold; /* Define o peso da fonte como negrito */
+    border-radius: 8px; /* Adiciona bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra */
+    transition: transform 0.2s; /* Suaviza a transição ao passar o mouse */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cards div:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho ao passar o mouse */
+}

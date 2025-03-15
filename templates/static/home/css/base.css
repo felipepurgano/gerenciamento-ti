@@ -1,0 +1,60 @@
+/* Define um espaçamento ao redor da navbar */
+.nav {
+    margin-top: 20px; /* Adiciona um espaço de 20px entre o topo da página e a navbar */
+    margin-bottom: 20px; /* Adiciona um espaço de 20px entre a navbar e o conteúdo abaixo */
+    display: flex; /* Garante que os itens da navbar fiquem alinhados em linha */
+    justify-content: center; /* Centraliza a navbar na página */
+    background-color: #f8f9fa; /* Cor de fundo suave para a navbar */
+    padding: 10px 20px; /* Adiciona um espaço interno para evitar que os itens fiquem colados */
+    border-radius: 8px; /* Arredonda os cantos da navbar para um visual mais moderno */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra para destacar a navbar */
+}
+
+/* Estiliza os itens da navbar */
+.nav-item {
+    margin: 0 10px; /* Adiciona um pequeno espaço entre os itens */
+}
+
+/* Personaliza os links da navbar */
+.nav-link {
+    color: #333; /* Define a cor padrão dos links */
+    padding: 8px 15px; /* Adiciona um preenchimento interno para facilitar o clique */
+    border-radius: 5px; /* Deixa os links com cantos arredondados */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave ao efeito hover */
+}
+
+/* Define o estilo do link ativo */
+.nav-link.active {
+    background-color: #007bff; /* Cor azul para o item ativo */
+    color: white; /* Cor do texto no item ativo */
+}
+
+.nav-link.active:hover {
+    background-color: #71b6ff;
+}
+
+.nav-link.active.login {
+    background-color: #00471e; /* Cor azul para o item ativo */
+    color: white; /* Cor do texto no item ativo */
+}
+
+.nav-link.active.login:hover {
+    background-color: #00b64c;
+}
+
+/* Adiciona um efeito ao passar o mouse sobre os links */
+.nav-link:hover {
+    background-color: #e9ecef; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estiliza o dropdown */
+.dropdown-menu {
+    border-radius: 5px; /* Deixa o menu suspenso mais arredondado */
+    border: 1px solid #ddd; /* Adiciona uma borda leve para destacar o menu */
+}
+
+/* Ajusta o link desativado */
+.nav-link.disabled {
+    color: #aaa; /* Cor cinza para indicar que está desativado */
+    pointer-events: none; /* Impede que o usuário clique no link */
+}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static%}
+
+{% block 'head'%}
+<link rel="stylesheet" href="{% static 'telefones/css/telefones.css' %}">
+{% endblock 'head'%}
+
+{% block 'body' %}
+
+<div class="sidebar">
+    <div class="sidebar__menu">
+        <div class="sidebar__options">
+            <a href="" class="sidebar__item">Departamentos</a>
+            <a href="{% url 'cadastro' %}" class="sidebar__item">Cadastrar equipamento</a>
+            <a href="" class="sidebar__item">Manutenções</a>
+        </div>
+    </div>
+</div>
+
+{% endblock 'body' %}

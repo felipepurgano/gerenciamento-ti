@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static%}
+
+{% block 'head'%}
+<link rel="stylesheet" href="{% static 'manutencoes/css/manutencoes.css' %}">
+{% endblock 'head'%}
+
+{% block 'body' %}
+
+<div class="sidebar">
+    <div class="sidebar__menu">
+        <div class="sidebar__options">
+            <a href="" class="sidebar__item">Departamentos</a>
+            <a href="" class="sidebar__item">Equipamentos</a>
+            <a href="" class="sidebar__item">Cadastrar Equipamentos</a>
+            <a href="" class="sidebar__item">Cadastrar Manutenção</a>
+            <a href="" class="sidebar__item">Manutenções</a>
+        </div>
+    </div>
+</div>
+
+{% endblock 'body' %}

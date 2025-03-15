@@ -1,0 +1,96 @@
+/* Resetando margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilizando o container principal */
+.container-login {
+    display: flex;
+    height: 80vh; /* Reduzindo um pouco a altura */
+    width: 80vw; /* Reduzindo a largura para não ocupar a tela toda */
+    max-width: 1000px; /* Limitando a largura máxima */
+    max-height: 600px; /* Limitando a altura máxima */
+    margin: auto; /* Centraliza o container na tela */
+    margin-top: 13vh;
+    border-radius: 10px; /* Bordas arredondadas para um design melhor */
+    overflow: hidden; /* Para manter a imagem ajustada corretamente */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adicionando sombra para destacar */
+}
+
+/* Área da imagem/vídeo */
+.left-side {
+    flex: 1;
+    background: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left-side img, .left-side video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Área do formulário */
+.right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: #fff;
+}
+
+.right-side h2 {
+    margin-bottom: 20px;
+}
+
+.right-side form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+}
+
+.right-side label {
+    margin-bottom: 5px;
+}
+
+.right-side input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.right-side button {
+    padding: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.right-side button:hover {
+    background: #0056b3;
+}
+
+.right-side p {
+    margin-top: 10px;
+}
+
+.right-side a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.right-side a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,28 @@
+/* Define o estilo geral da sidebar */
+.sidebar {
+    width: 250px; /* Largura da sidebar */
+    background-color: #2c3e50; /* Cor de fundo azul escuro */
+    padding: 10px; /* Espaçamento interno para não grudar nas bordas */
+    height: 100vh; /* Faz a sidebar ocupar toda a altura da tela */
+}
+
+/* Estiliza o contêiner das opções do menu */
+.sidebar__options {
+    display: flex; /* Usa flexbox para organizar os itens */
+    flex-direction: column; /* Organiza os itens verticalmente */
+}
+
+/* Estiliza cada item do menu */
+.sidebar__item {
+    padding: 10px; /* Adiciona um espaço interno para melhor visualização */
+    color: white; /* Define a cor do texto como branco */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    background-color: #34495e; /* Define uma cor de fundo azul acinzentado */
+    margin-bottom: 5px; /* Adiciona um espaçamento entre os itens */
+    border-radius: 5px; /* Arredonda as bordas para um visual mais suave */
+}
+
+/* Altera a cor de fundo quando o usuário passa o mouse sobre um item */
+.sidebar__item:hover {
+    background-color: #1abc9c; /* Muda a cor de fundo para um verde água */
+}

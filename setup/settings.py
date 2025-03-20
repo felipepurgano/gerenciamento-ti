@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'telefones.apps.TelefonesConfig',
     'servidores.apps.ServidoresConfig',
     'cftv.apps.CftvConfig',
+    'dashboard.apps.DashboardConfig',
 ]
 
 MIDDLEWARE = [
@@ -128,7 +129,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'templates/static'),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'setup/static'),)
 STATIC_ROOT = os.path.join('static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

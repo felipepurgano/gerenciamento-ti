@@ -6,46 +6,59 @@
 {% endblock 'head'%}
 
 {% block 'body' %}
- 
 <body>
-  <title>Cadastro de Impressora</title>
-  <h1>Cadastro de Impressora</h1>
-  <form action="#" method="post">  <!-- Substitua "#" pela URL correta de envio do formulário -->
+    <div class="container">
+        {% include 'impressoras/partials/_sidebar.html' %}
 
-    <label for="nome_dispositivo">Nome do Dispositivo:</label>
-    <input type="text" id="nome_dispositivo" name="nome_dispositivo" required>
+        <div class="form-container">
+            <h1>Cadastro de Impressora</h1>
 
-    <label for="ip">IP:</label>
-    <input type="text" id="ip" name="ip" required placeholder="Ex: 192.168.1.100">
+            {% if messages %}
+                <br>
+                {% for message in messages %}
+                    <section class="alert {{message.tags}}">
+                        {{message}}
+                    </section>
+                {% endfor %}
+            {% endif %}
 
-    <label for="departamento">Departamento:</label>
-    <select id="departamento" name="departamento" required>
-      <option value="">Selecione um departamento</option>
-      <option value="TI">TI</option>
-      <option value="Financeiro">Financeiro</option>
-      <option value="RH">RH</option>
-      <option value="Marketing">Marketing</option>
-      <option value="Outro">Outro</option>
-    </select>
+            <form action="" method="post">  
+                {% csrf_token %}
 
-    <label for="status">Status:</label>
-    <select name="status" id="status">
-      <option value="Ativo">Ativo</option>
-      <option value="Inativo">Inativo</option>
-    </select>
+                <label for="nome_dispositivo">Nome do Dispositivo:</label>
+                <input type="text" id="nome_dispositivo" name="nome_dispositivo" required>
 
-    <label for="marca">Marca:</label>
-    <input type="text" id="marca" name="marca" required>
+                <label for="ip">IP:</label>
+                <input type="text" id="ip" name="ip" required placeholder="Ex: 192.168.1.100">
 
-    <label for="modelo">Modelo:</label>
-    <input type="text" id="modelo" name="modelo" required>
+                <label for="departamento">Departamento:</label>
+                <select id="departamento" name="departamento" required>
+                    <option value="">Selecione um departamento</option>
+                    <option value="TI">TI</option>
+                    <option value="Financeiro">Financeiro</option>
+                    <option value="RH">RH</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Outro">Outro</option>
+                </select>
 
-    <label for="contador_paginas">Contador de Páginas:</label>
-    <input type="number" id="contador_paginas" name="contador_paginas" min="0" value="0" required>
+                <label for="status">Status:</label>
+                <select name="status" id="status">
+                    <option value="Ativo">Ativo</option>
+                    <option value="Inativo">Inativo</option>
+                </select>
 
-    <button type="submit">Cadastrar</button>
-  </form>
+                <label for="marca">Marca:</label>
+                <input type="text" id="marca" name="marca" required>
 
+                <label for="modelo">Modelo:</label>
+                <input type="text" id="modelo" name="modelo" required>
+
+                <label for="contador_paginas">Contador de Páginas:</label>
+                <input type="number" id="contador_paginas" name="contador_paginas" min="0" value="0" required>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
 </body>
-
 {% endblock 'body' %}

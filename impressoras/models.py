@@ -1,6 +1,6 @@
 from django.db import models
 
-class Impressora(models.Model):
+class CadastroImpressora(models.Model):
     DEPARTAMENTOS = [
         ('TI', 'TI'),
         ('Financeiro', 'Financeiro'),

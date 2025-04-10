@@ -27,3 +27,20 @@
     background-color: #1abc9c; /* Muda a cor de fundo para um verde água */
 }
 
+.container {
+    display: flex; /* Ativa o flexbox */
+    align-items: flex-start; /* Alinha os itens no topo */
+}
+
+.sidebar {
+    flex: 0 0 250px; /* Mantém a largura fixa da sidebar */
+    height: 100vh; /* Mantém a altura da tela */
+    position: fixed; left: 0; /* Permite que a sidebar fique fixa */
+}
+
+.form-container {
+    flex: 1; /* Faz o formulário ocupar o restante da tela */
+    padding: 20px;
+    max-width: 1120px; /* Ajuste conforme necessário */
+    margin: 0 auto;
+}

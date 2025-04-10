@@ -2,16 +2,16 @@
 {% load static%}
 
 {% block 'head'%}
-<link rel="stylesheet" href="{% static 'impressoras/css/cadastro.css' %}">
+<link rel="stylesheet" href="{% static 'telefones/css/cad_tel.css' %}">
 {% endblock 'head'%}
 
 {% block 'body' %}
 <body>
     
     <div class="container">
-        {% include 'impressoras/partials/_sidebar.html' %}
+        {% include 'telefones/partials/_sidebar.html' %}
         <div class="form-container">
-            <h1>Cadastro de Impressora</h1>
+            <h1>Cadastro de Telefone</h1>
 
             {% if messages %}
                 <br>
@@ -25,8 +25,8 @@
             <form action="" method="post">  
                 {% csrf_token %}
 
-                <label for="nome_dispositivo">Nome do Dispositivo:</label>
-                <input type="text" id="nome_dispositivo" name="nome_dispositivo" required>
+                <label for="colaborador">Colaborador:</label>
+                <input type="text" id="colaborador" name="colaborador" required>
 
                 <label for="ip">IP:</label>
                 <input type="text" id="ip" name="ip" required placeholder="Ex: 192.168.1.100">
@@ -41,20 +41,8 @@
                     <option value="Outro">Outro</option>
                 </select>
 
-                <label for="status">Status:</label>
-                <select name="status" id="status">
-                    <option value="Ativo">Ativo</option>
-                    <option value="Inativo">Inativo</option>
-                </select>
-
-                <label for="marca">Marca:</label>
-                <input type="text" id="marca" name="marca" required>
-
-                <label for="modelo">Modelo:</label>
-                <input type="text" id="modelo" name="modelo" required>
-
-                <label for="contador_paginas">Contador de Páginas:</label>
-                <input type="number" id="contador_paginas" name="contador_paginas" min="0" value="0" required>
+                <label for="ramal">Ramal:</label>
+                <input type="text" id="ramal" name="ramal" required>
 
                 <button type="submit">Cadastrar</button>
             </form>

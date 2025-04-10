@@ -2,7 +2,7 @@
 {% load static%}
 
 {% block 'head'%}
-<link rel="stylesheet" href="{% static '#/css/#.css' %}">
+<link rel="stylesheet" href="{% static 'sidebar/css/sidebar.css' %}">
 {% endblock 'head'%}
 
 {% block 'body' %}
@@ -11,10 +11,10 @@
     <div class="sidebar__menu">
         <div class="sidebar__options">
             <a href="" class="sidebar__item">CFTV</a>
-            <a href="" class="sidebar__item">Impressoras</a>
+            <a href="{% url 'impressoras' %}" class="sidebar__item">Impressoras</a>
             <a href="" class="sidebar__item">Manutenções</a>
             <a href="" class="sidebar__item">Servidores</a>
-            <a href="" class="sidebar__item">Telefones</a>
+            <a href="{% url 'telefones' %}" class="sidebar__item">Telefones</a>
         </div>
     </div>
 </div>

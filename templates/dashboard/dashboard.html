@@ -7,16 +7,6 @@
 
 {% block 'body' %}
 
-<div class="sidebar">
-    <div class="sidebar__menu">
-        <div class="sidebar__options">
-            <a href="" class="sidebar__item">CFTV</a>
-            <a href="{% url 'impressoras' %}" class="sidebar__item">Impressoras</a>
-            <a href="" class="sidebar__item">Manutenções</a>
-            <a href="" class="sidebar__item">Servidores</a>
-            <a href="{% url 'telefones' %}" class="sidebar__item">Telefones</a>
-        </div>
-    </div>
-</div>
+{% include 'dashboard/partials/_sidebar.html' %}
 
 {% endblock 'body' %}

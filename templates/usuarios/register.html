@@ -2,25 +2,31 @@
 {% load static %}
 
 {% block 'head'%}
-<link rel="stylesheet" href="{% static 'usuarios/css/login.css' %}">
+<link rel="stylesheet" href="{% static 'usuarios/css/register.css' %}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 {% endblock 'head'%}
 
 {% block 'body' %}
-<div class="container-login">
+<div class="container-register">
     <!-- Área da imagem -->
     <div class="left-side">
-        <img src="{% static 'usuarios/img/Login.png' %}" alt="Imagem ilustrativa">
+        <img src="{% static '\usuarios\img\Register.png' %}" alt="Imagem ilustrativa">
     </div>
 
     <!-- Área do formulário -->
     <div class="right-side">
-        <h2>Login</h2>
+        <h2>Cadastre-se</h2>
         <form method="POST">
             {% csrf_token %}
-            <label for="email">E-mail:</label>
+            <label for="username">Username:</label>
             <div class="input-container">
                 <i class="fa fa-user icon"></i>
+                <input type="username" id="username" name="username" required>
+            </div>
+
+            <label for="email">E-mail:</label>
+            <div class="input-container">
+                <i class="fa-solid fa-envelope icon"></i>
                 <input type="email" id="email" name="email" required>
             </div>
 
@@ -30,23 +36,16 @@
                 <input type="password" id="password" name="password" required>
             </div>
 
-            <div class="extras">
-                <div class="remember-me">
-                    <input type="checkbox" id="remember-me" name="remember-me">
-                    <label for="remember-me">Lembrar-me</label>
-                </div>
-
-                <div class="forgot-password">
-                    <a href="#">Esqueci minha senha</a>
-                </div>
+            <label for="password">Repetir Senha:</label>
+            <div class="input-container">
+                <i class="fa fa-lock icon"></i>
+                <input type="password" id="password" name="password" required>
             </div>
 
             <button type="submit">
                 Entrar <i class="fa fa-arrow-right"></i>
             </button>
 
-            <div class="register-link">
-                <p>Não tem uma conta? <a href="{% url 'register' %}">Registrar</a></p>
             </div>
         </form>
     </div>

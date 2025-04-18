@@ -7,7 +7,7 @@
 }
 
 /* Estilizando o container principal */
-.container-login {
+.container-register {
     display: flex; /* Define a estrutura flexível para o container */
     height: 80vh; /* Define a altura do container como 80% da altura da tela */
     width: 80vw; /* Define a largura do container como 80% da largura da tela */

@@ -16,12 +16,19 @@
     <!-- Área do formulário -->
     <div class="right-side">
         <h2>Login</h2>
+        {% if messages %}
+            {% for message in messages %}
+            <section class="alert {{message.tags}}">
+                {{message}}
+            </section>
+            {% endfor %}
+        {% endif %}
         <form method="POST">
             {% csrf_token %}
-            <label for="email">E-mail:</label>
+            <label for="username">Username</label>
             <div class="input-container">
                 <i class="fa fa-user icon"></i>
-                <input type="email" id="email" name="email" required>
+                <input type="username" id="username" name="username" required>
             </div>
 
             <label for="password">Senha:</label>

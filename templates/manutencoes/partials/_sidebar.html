@@ -9,12 +9,12 @@
         <div class="sidebar__options">
             <a href="{% url 'dashboard' %}" class="sidebar__item">Dashboard</a>
             <a href="" class="sidebar__item">Listar Equipamentos</a>
-            <a href="" class="sidebar__item">Departamentos</a>
+            <a href="{% url 'dpto_manutencoes' %}" class="sidebar__item">Departamentos</a>
             <a href="" class="sidebar__item">Cadastrar equipamento</a>
             <a href="" class="sidebar__item">Manutenções Realizadas</a>
             <a href="" class="sidebar__item">Manutenções Agendadas</a>
         </div>
         <!-- Botão de logout -->
-        <a href="#" class="sidebar__item logout-button">Sair</a>
+        <a href="{% url 'logout' %}" class="sidebar__item logout-button">Sair</a>
     </div>
 </div>

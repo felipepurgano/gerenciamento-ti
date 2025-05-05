@@ -4,15 +4,21 @@ from django.contrib import messages
 from django.contrib.messages import constants
    
 def impressoras(request):
+    if not request.user.is_authenticated:
+        return redirect('/')
     if request.method == 'GET':
         return render(request, 'impressoras/impressoras.html')
 
-def departamentos(request):    
+def departamentos(request):
+    if not request.user.is_authenticated:
+        return redirect('/')
     if request.method == 'GET':
         return render(request, 'impressoras/departamentos.html')
     
 # Função para cadastrar impressora
-def cad_impressora(request): 
+def cad_impressora(request):
+    if not request.user.is_authenticated:
+        return redirect('/')
     if request.method == 'GET':
         return render(request, 'impressoras/cadastro.html')
     elif request.method == 'POST':

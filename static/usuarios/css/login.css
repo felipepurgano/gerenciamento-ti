@@ -110,3 +110,51 @@
 .right-side button:hover {
     background: #0056b3; /* Altera a cor de fundo para um tom mais escuro de azul quando o botão é hoverado */
 }
+
+/* ====== Container dos elementos extras (Lembrar-me + Esqueci minha senha) ====== */
+.extras {
+    display: flex; /* Coloca os dois elementos (remember-me e forgot-password) lado a lado */
+    justify-content: space-between; /* Um fica alinhado à esquerda, outro à direita */
+    align-items: center; /* Alinha verticalmente ao centro */
+    flex-wrap: nowrap; /* Impede que os itens quebrem para a linha de baixo */
+    margin-bottom: 15px; /* Espaçamento abaixo desse bloco */
+    font-size: 14px; /* Define um tamanho de texto levemente menor */
+}
+
+/* ====== Checkbox "Lembrar-me" ====== */
+.remember-me {
+    display: flex; /* Alinha o checkbox e o texto horizontalmente */
+    align-items: center; /* Centraliza verticalmente o texto com o checkbox */
+    gap: 5px; /* Espaço entre o checkbox e o texto */
+    white-space: nowrap; /* Garante que o texto "Lembrar-me" fique em uma única linha */
+}
+
+/* ====== Link "Esqueci minha senha" ====== */
+.forgot-password a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: #007BFF; /* Define a cor azul padrão (semelhante ao botão) */
+}
+
+/* Hover para o link "Esqueci minha senha" */
+.forgot-password a:hover {
+    text-decoration: underline; /* Adiciona sublinhado quando o mouse passa em cima */
+}
+
+/* ====== Link para registro ====== */
+.register-link {
+    margin-top: 20px; /* Espaço acima do texto */
+    text-align: center; /* Centraliza o texto */
+    font-size: 14px; /* Tamanho menor para combinar com o restante do formulário */
+}
+
+/* Estilo do link "Registrar" */
+.register-link a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: #007BFF; /* Azul semelhante ao botão */
+    font-weight: bold; /* Destaca o link com negrito */
+}
+
+/* Hover do link "Registrar" */
+.register-link a:hover {
+    text-decoration: underline; /* Sublinha o texto ao passar o mouse */
+}

@@ -10,28 +10,20 @@
 {% include 'impressoras/partials/_sidebar.html' %}
 
 <div class="container-dpto">
+
     <h1 class="departments-title">Departamentos</h1>
-
     <div class="departments-grid">
-        <a href="#" class="card">
+      {% for departamento in departamentos %}
+        <div class="card">
             <div class="card-body">
-                <h5 class="card-title">TI</h5>
+                <h5 class="card-title">{{ departamento.departamento }}</h5>
             </div>
-        </a>
-
-        <a href="#" class="card">
-            <div class="card-body">
-                <h5 class="card-title">RH</h5>
-            </div>
-        </a>
-
-        <a href="#" class="card">
-            <div class="card-body">
-                <h5 class="card-title">Financeiro</h5>
-            </div>
-        </a>
+        </div>
+      {% empty %}
+        <p>Nenhum equipamento encontrado.</p>
+      {% endfor %}
     </div>
-</div>
 
+</div>
 
 {% endblock 'body' %}

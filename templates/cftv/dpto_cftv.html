@@ -13,24 +13,19 @@
     <h1 class="departments-title">Departamentos</h1>
 
     <div class="departments-grid">
-        <a href="#" class="card">
-            <div class="card-body">
-                <h5 class="card-title">TI</h5>
-            </div>
-        </a>
+        {% for cftv in cftvs %}
+          <div class="card">
+              <div class="card-body">
+                  <h5 class="card-title">{{ cftv.departamento }}</h5>
+                  <p><strong>IP:</strong> {{ cftv.ip }}</p>
+                  <p><strong>Status:</strong> {{ cftv.status }}</p>
+              </div>
+          </div>
+        {% empty %}
+          <p>Nenhum equipamento encontrado.</p>
+        {% endfor %}
+      </div>
 
-        <a href="#" class="card">
-            <div class="card-body">
-                <h5 class="card-title">RH</h5>
-            </div>
-        </a>
-
-        <a href="#" class="card">
-            <div class="card-body">
-                <h5 class="card-title">Financeiro</h5>
-            </div>
-        </a>
-    </div>
 </div>
 
 

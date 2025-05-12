@@ -13,7 +13,8 @@ def departamentos(request):
     if not request.user.is_authenticated:
         return redirect('/')
     if request.method == 'GET':
-        return render(request, 'impressoras/departamentos.html')
+        departamentos = CadastroImpressora.objects.all()
+        return render(request, 'impressoras/departamentos.html', {'departamentos': departamentos})
     
 # Função para cadastrar impressora
 def cad_impressora(request):
@@ -43,12 +44,12 @@ def cad_impressora(request):
     cad_impressora.save()
 
     messages.add_message(request, constants.SUCCESS, 'Impressora cadastrada com sucesso!')
-    return redirect('/impressora/cad_impressora')
+    return redirect('/impressora/cad_impressora.html')
 
-# # Função para listar impressoras
-# def lista_impressoras(request):
-#     impressoras = CadastroImpressora.objects.all()
-#     return render(request, 'impressoras/impressoras.html', {'impressoras': impressoras})
+ # Função para listar impressoras
+def lista_impressoras(request):
+    impressoras = CadastroImpressora.objects.all()
+    return render(request, 'impressoras/listar_equipamentos.html', {'impressoras': impressoras})
 
 # # Função para deletar impressora
 # def deleta_impressora(request, id):

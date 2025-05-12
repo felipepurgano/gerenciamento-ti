@@ -17,12 +17,20 @@
     <div class="right-side">
         <h2>Login</h2>
         {% if messages %}
-            {% for message in messages %}
-            <section class="alert {{message.tags}}">
-                {{message}}
-            </section>
-            {% endfor %}
+                {% for message in messages %}
+                    <section class="alert {{message.tags}}">
+                        {{message}}
+                    </section>
+                {% endfor %}
+
+            <script>
+                //Redireciona após 1 segundo
+                setTimeout(() => {
+                    window.location.href = "{% url 'dashboard' %}";
+                }, 1000);
+            </script>
         {% endif %}
+
         <form method="POST">
             {% csrf_token %}
             <label for="username">Username</label>

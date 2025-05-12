@@ -1,0 +1,51 @@
+/* Grid de departamentos */
+.equip-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha em telas menores */
+    gap: 20px; /* Espaçamento entre os cards */
+    margin-top: 20px;
+}
+
+/* Estilizando cada card */
+.card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: inherit; /* Mantém a cor do texto padrão */
+    width: 200px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Efeito ao passar o mouse */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Título dentro do card */
+.card-title {
+    font-size: 20px;
+    text-align: center;
+}
+
+.container-dpto {
+    margin-left: 260px; /* Deixa espaço para a sidebar fixa */
+    padding: 20px; /* Espaço interno */
+}
+
+/* Estiliza o título */
+.equip-title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card-link {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: inherit; /* Mantém a cor do texto padrão */
+}

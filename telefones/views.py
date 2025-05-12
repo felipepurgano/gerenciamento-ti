@@ -17,3 +17,9 @@ def dpto_tel(request):
         return redirect('/')
     if request.method == 'GET':
         return render(request, 'telefones/dpto_tel.html')
+    
+def listar_tel(request):
+    if not request.user.is_authenticated:
+        return redirect('/')
+    if request.method == 'GET':
+        return render(request, 'telefones/listar_tel.html')

@@ -19,12 +19,12 @@ def register(request):
 
         if not password == confirm_password:
             messages.add_message(request, constants.ERROR, 'As senhas não coincidem.')
-            return redirect('register')
+            return render(request, 'usuarios/register.html')
         
         user = User.objects.filter(username=username)
 
         if user.exists():
-            messages.add_message(request, constants.ERROR, 'Usuário já existe.')
+            messages.add_message(request, constants.WARNING, 'Usuário já existe.')
             return redirect('register')
         
         try:
@@ -33,10 +33,11 @@ def register(request):
                 email=email,
                 password=password
             )
+            messages.add_message(request, constants.SUCCESS, 'Usuário cadastrado com sucesso!')
             return redirect('/')
         except:
             messages.add_message(request, constants.ERROR, 'Erro interno do servidor.')
-            return redirect('register')
+            return render(request, 'usuarios/register.html')
 
 def login(request):
     if request.method == 'GET':
@@ -50,7 +51,7 @@ def login(request):
         if user:
             auth.login(request, user)
             messages.add_message(request, constants.SUCCESS, 'Usuário logado com sucesso!')
-            return redirect('dashboard/dashboard')
+            return redirect('/')
         else:
             messages.add_message(request, constants.ERROR, 'Usuário ou senha inválido!')
             return redirect('/')

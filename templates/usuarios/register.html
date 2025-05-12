@@ -18,10 +18,29 @@
         <h2>Cadastre-se</h2>
         {% if messages %}
             {% for message in messages %}
-            <section class="alert {{message.tags}}">
+            <section id="popup-message" class="alert {{message.tags}}">
                 {{message}}
             </section>
             {% endfor %}
+            <!-- Redireciona após 3 segundos quando o cadastro é efetuado com sucesso e após 4 segundos quando ocorre qualquer erro*/ -->
+            <script>
+                const popup = document.getElementById('popup-message');
+                if (popup && popup.classList.contains('success')) {
+                    setTimeout(() => {
+                        window.location.href = "{% url 'login' %}";
+                    }, 3000);
+                }
+                else if (popup && popup.classList.contains('error')) {
+                    setTimeout(() => {
+                        window.location.href = "{% url 'register' %}";
+                    }, 4000);
+                }
+                else {
+                    setTimeout(() => {
+                        window.location.href = "{% url 'register' %}";
+                    }, 4000);
+                }
+            </script>
         {% endif %}
         <form method="POST">
             {% csrf_token %}
@@ -52,6 +71,10 @@
             <button type="submit">
                 Cadastre-se <i class="fa fa-right-to-bracket"></i>
             </button>
+
+            <div class="login-link">
+                <p>Já possui cadastro? <a href="{% url 'login' %}">Entre</a></p>
+            </div>
 
             </div>
         </form>

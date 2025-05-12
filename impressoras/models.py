@@ -23,4 +23,4 @@ class CadastroImpressora(models.Model):
     contador_paginas = models.PositiveIntegerField(default=0, verbose_name="Contador de Páginas")
 
     def __str__(self):
-        return f"{self.nome_dispositivo} ({self.ip})"
+        return self.nome_dispositivo

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 def dashboard(request):
     if not request.user.is_authenticated:

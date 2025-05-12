@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block 'head' %}
+<link rel="stylesheet" href="{% static 'telefones/css/listar_tel.css' %}">
+{% endblock 'head' %}
+
+{% block 'body' %}
+
+{% include 'telefones/partials/_sidebar.html' %}
+
+<div class="container-dpto">
+
+    <h1 class="equip-title">Impressoras</h1>
+    <div class="equip-grid">
+      {% for telefone in telefones %}
+        <div class="card">
+            <div class="card-body">
+              <a href="http://{{ telefone.ip}}" class="card-link" target="_blank">
+                <h5 class="card-title">{{ telefone.nome_dispositivo }}</h5>
+                <p><strong>IP:</strong> {{ telefone.ip }}</p>
+                <p><strong>Status:</strong> {{ telefone.status }}</p>
+              </a>
+            </div>
+        </div>
+      {% empty %}
+        <p>Nenhum equipamento encontrado.</p>
+      {% endfor %}
+    </div>
+
+</div>
+
+{% endblock 'body' %}

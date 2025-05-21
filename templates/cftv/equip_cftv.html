@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block 'head' %}
+<link rel="stylesheet" href="{% static 'cftv/css/racks.css' %}">
+{% endblock 'head' %}
+
+{% block 'body' %}
+
+{% include 'cftv/partials/_sidebar.html' %}
+
+<div class="container-dpto">
+    <h1 class="departments-title">Racks</h1>
+
+    <div class="departments-grid">
+        {% for dvr in dvrs %}
+          <div class="card">
+              <div class="card-body">
+                  <h5 class="card-title">{{ dvr.rack }}</h5>
+              </div>
+          </div>
+        {% empty %}
+          <p>Nenhum equipamento encontrado.</p>
+        {% endfor %}
+      </div>
+
+</div>
+
+{% endblock 'body' %}

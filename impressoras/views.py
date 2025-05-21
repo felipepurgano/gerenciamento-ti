@@ -44,7 +44,7 @@ def cad_impressora(request):
     cad_impressora.save()
 
     messages.add_message(request, constants.SUCCESS, 'Impressora cadastrada com sucesso!')
-    return redirect('/impressora/cad_impressora.html')
+    return redirect('/impressora/cad_impressora/')
 
  # Função para listar impressoras
 def lista_impressoras(request):

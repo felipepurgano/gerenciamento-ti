@@ -5,4 +5,5 @@ urlpatterns = [
     path('cftv/', views.cftv, name='cftv'),
     path('cad_cftv/', views.cad_cftv, name='cad_cftv'),
     path('dpto_cftv/', views.dpto_cftv, name='dpto_cftv'),
+    path('equip_cftv/', views.equip_cftv, name='equip_cftv'),
 ]

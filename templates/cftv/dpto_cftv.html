@@ -16,9 +16,11 @@
         {% for cftv in cftvs %}
           <div class="card">
               <div class="card-body">
-                  <h5 class="card-title">{{ cftv.departamento }}</h5>
+                <a href="http://{{ cftv.ip }}" class="card-link" target="_blank">
+                  <h5 class="card-title">{{ cftv.nome_dispositivo }}</h5>
                   <p><strong>IP:</strong> {{ cftv.ip }}</p>
-                  <p><strong>Status:</strong> {{ cftv.status }}</p>
+                  <p><strong>Rack:</strong> {{ cftv.rack }}</p>
+                </a>
               </div>
           </div>
         {% empty %}
@@ -27,6 +29,5 @@
       </div>
 
 </div>
-
 
 {% endblock 'body' %}

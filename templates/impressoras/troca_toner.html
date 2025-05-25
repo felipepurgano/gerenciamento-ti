@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block 'head'%}
+<link rel="stylesheet" href="{% static 'impressoras/css/dash_manutencoes.css' %}">
+
+{% endblock 'head'%}
+
+{% block 'body' %}
+<body>
+    <div class="container">
+        {% include 'impressoras/partials/_sidebar.html' %}
+        <div class="form-container">
+            <div class="header-bar">
+                <h1>Troca de Toner</h1>
+                <a href="{% url 'manutencoes_imp' %}" class="add-button">+ Adicionar</a>
+            </div>
+
+            {% if messages %}
+                <br>
+                {% for message in messages %}
+                    <section class="alert {{message.tags}}">
+                        {{message}}
+                    </section>
+                {% endfor %}
+            {% endif %}
+
+            <div class="maintenance-list">
+                {% for departamento in departamentos %}
+                    <div class="maintenance-item">
+                        <strong>{{ departamento.nome_dispositivo }}</strong> - 
+                        {{ departamento.departamento }} - 
+                    </div>
+                {% empty %}
+                    <p>Nenhuma troca cadastrada.</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock 'body' %}

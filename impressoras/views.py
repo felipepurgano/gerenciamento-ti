@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import CadastroImpressora
+from .models import CadastroImpressora, Manutencao, Departamento, TrocaToner
 from django.contrib import messages
 from django.contrib.messages import constants
    
@@ -21,7 +21,8 @@ def cad_impressora(request):
     if not request.user.is_authenticated:
         return redirect('/')
     if request.method == 'GET':
-        return render(request, 'impressoras/cadastro.html')
+        departamentos = CadastroImpressora.objects.all()
+        return render(request, 'impressoras/cadastro.html', {'departamentos': departamentos})
     elif request.method == 'POST':
         nome_dispositivo = request.POST.get('nome_dispositivo')
         ip = request.POST.get('ip')
@@ -51,6 +52,32 @@ def lista_impressoras(request):
     impressoras = CadastroImpressora.objects.all()
     return render(request, 'impressoras/listar_equipamentos.html', {'impressoras': impressoras})
 
+def listar_manutencoes(request):
+    manutencoes = Manutencao.objects.all()
+    return render(request, 'impressoras/dash_manutencoes.html', {'manutencoes': manutencoes})
+
+def manutencoes_imp(request):
+    if not request.user.is_authenticated:
+        return redirect('/')
+    if request.method == 'GET':
+        departamentos = CadastroImpressora.objects.all()
+        return render(request, 'impressoras/manutencoes_imp.html', {'departamentos': departamentos})
+    
+def cadastrar_departamento(request):
+    if request.method == 'POST':
+        nome = request.POST.get('departamento')
+        if nome:
+            Departamento.objects.create(departamento=nome)
+            return redirect('listar_departamentos')
+    return render(request, 'impressoras/cad_dpto_imp.html')
+
+def troca_toner(request):
+    if not request.user.is_authenticated:
+        return redirect('/')
+    if request.method == 'GET':
+        departamentos = CadastroImpressora.objects.all()
+        return render(request, 'impressoras/troca_toner.html', {'departamentos': departamentos})
+
 # # Função para deletar impressora
 # def deleta_impressora(request, id):
 #     impressora = CadastroImpressora.objects.get(id=id)
@@ -77,4 +104,3 @@ def lista_impressoras(request):
 #     impressora.save()
 #     messages.add_message(request, constants.SUCCESS, 'Impressora atualizada com sucesso!')
 #     return redirect('/impressora/impressoras')
-

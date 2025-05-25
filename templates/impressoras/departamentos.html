@@ -3,6 +3,7 @@
 
 {% block 'head' %}
 <link rel="stylesheet" href="{% static 'impressoras/css/departamentos.css' %}">
+
 {% endblock 'head' %}
 
 {% block 'body' %}
@@ -11,7 +12,11 @@
 
 <div class="container-dpto">
 
-    <h1 class="departments-title">Departamentos</h1>
+    <div class="header-bar">
+        <h1 class="departments-title">Departamentos</h1>
+        <a href="{% url 'cadastrar_departamento' %}" class="add-button">+ Adicionar</a>
+    </div>
+
     <div class="departments-grid">
       {% for departamento in departamentos %}
         <div class="card">
@@ -20,7 +25,7 @@
             </div>
         </div>
       {% empty %}
-        <p>Nenhum equipamento encontrado.</p>
+        <p>Nenhum departamento encontrado.</p>
       {% endfor %}
     </div>
 

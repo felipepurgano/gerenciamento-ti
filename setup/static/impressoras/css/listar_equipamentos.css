@@ -33,9 +33,9 @@
     text-align: center;
 }
 
-.container-dpto {
+.container-list {
     margin-left: 260px; /* Deixa espaço para a sidebar fixa */
-    padding: 20px; /* Espaço interno */
+    padding: 20px;
 }
 
 /* Estiliza o título */

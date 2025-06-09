@@ -1,43 +1,60 @@
-    .form-container {
-        max-width: 500px;
-        margin: 40px auto;
+/* Container geral com margem para o menu */
+.form-wrapper {
+    margin-left: 260px;
+    padding: 40px 20px;
+}
+
+/* Formulário centralizado e responsivo */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Título centralizado */
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Label e campo alinhados verticalmente */
+.form-container label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.form-container input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.form-container button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #45a049;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .form-wrapper {
+        margin-left: 0;
         padding: 20px;
-        background: #fff;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-
-    .form-container h1 {
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .form-container label {
-        display: block;
-        margin-top: 15px;
-        font-weight: bold;
-    }
-
-    .form-container input[type="text"] {
-        width: 100%;
-        padding: 8px;
-        margin-top: 5px;
-        border-radius: 4px;
-        border: 1px solid #ccc;
-    }
-
-    .form-container button {
-        margin-top: 20px;
-        padding: 10px 20px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        width: 100%;
-        font-size: 16px;
-        cursor: pointer;
-    }
-
-    .form-container button:hover {
-        background-color: #45a049;
-    }
+}

@@ -1,0 +1,17 @@
+{% load static %}
+
+{% block 'head'%}
+<link rel="stylesheet" href="{% static 'sidebar/css/sidebar.css' %}">
+{% endblock 'head' %}
+
+<div class="sidebar">
+    <div class="sidebar__menu">
+        <div class="sidebar__options">
+            <a href="{% url 'dashboard' %}" class="sidebar__item">Dashboard</a>
+            <a href="{% url 'cadastrar_email' %}" class="sidebar__item">Cadastrar E-mail</a>
+            <a href="{% url 'listar_emails' %}" class="sidebar__item">Listar E-mails</a>
+        </div>
+        <!-- Botão de logout -->
+        <a href="{% url 'logout' %}" class="sidebar__item logout-button">Sair</a>
+    </div>
+</div>

@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'servidores.apps.ServidoresConfig',
     'cftv.apps.CftvConfig',
     'dashboard.apps.DashboardConfig',
+    'emails.apps.EmailsConfig',
 ]
 
 MIDDLEWARE = [

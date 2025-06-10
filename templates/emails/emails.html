@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block 'head'%}
+<link rel="stylesheet" href="{% static 'sidebar/css/sidebar.css' %}">
+{% endblock 'head'%}
+
+{% block 'body' %}
+
+{% include 'emails/partials/_sidebar.html' %}
+
+{% endblock 'body' %}

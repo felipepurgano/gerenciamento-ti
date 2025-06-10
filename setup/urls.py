@@ -10,4 +10,5 @@ urlpatterns = [
     path('cftv/', include('cftv.urls')),
     path('servidores/', include('servidores.urls')),
     path('dashboard/', include('dashboard.urls')),
+    path('emails/', include('emails.urls')),
 ]

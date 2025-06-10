@@ -10,4 +10,5 @@ urlpatterns = [
     path('manutencoes/adicionar/', views.manutencoes_imp, name='manutencoes_imp'),
     path('departamentos/adicionar/', views.cadastrar_departamento, name='cadastrar_departamento'),
     path('troca_toner/', views.troca_toner, name='troca_toner'),
+    path('troca_toner/adicionar', views.adicionar_troca_toner, name='adicionar_troca_toner')
 ]

@@ -77,6 +77,12 @@ def troca_toner(request):
     if request.method == 'GET':
         departamentos = CadastroImpressora.objects.all()
         return render(request, 'impressoras/troca_toner.html', {'departamentos': departamentos})
+    
+def adicionar_troca_toner(request):
+    if not request.user.is_authenticated:
+        return redirect('/')
+    if request.method == 'GET':
+        return render(request, 'impressoras/adicionar_troca_toner.html')
 
 # # Função para deletar impressora
 # def deleta_impressora(request, id):
